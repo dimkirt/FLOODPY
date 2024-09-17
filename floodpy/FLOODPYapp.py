@@ -41,10 +41,10 @@ class FloodwaterEstimation:
             print(" We support only processing in Linux environment!")
 
         # Project Definition
-        self.projectfolder  = params_dict['projectfolder']
-        self.src            = params_dict['src_dir']
-        self.gpt            = params_dict['GPTBIN_PATH']
-        self.snap_orbit_dir = params_dict['snap_orbit_dir']
+        self.projectfolder  = os.path.expanduser(params_dict['projectfolder'])
+        self.src            = os.path.expanduser(params_dict['src_dir'])
+        self.gpt            = os.path.expanduser(params_dict['GPTBIN_PATH'])
+        self.snap_orbit_dir = os.path.expanduser(params_dict['snap_orbit_dir'])
         
         # Pre-flood and Flood temporal information
         self.pre_flood_datetime_start = datetime.datetime.strptime(params_dict['pre_flood_start'],'%Y%m%dT%H%M%S')
