@@ -1,0 +1,34 @@
+name: floodpy_cpu
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - xarray
+  - netcdf4
+  - rioxarray
+  - geopandas
+  - rasterio
+  - folium
+  - tqdm
+  - h5py
+  - jupyter
+  - ipython
+  - pytorch
+  - torchvision
+  - xbatcher
+  - pip:
+    - wandb==0.12.18
+    - visdom==0.1.8
+    - torchsummary==1.5.1
+    - zarr==2.16.1
+    - xarray-spatial==0.4.0
+    - cdsapi==0.7.0
